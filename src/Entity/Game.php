@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=GameRepository::class)
  */
-class Game
+class Game implements \JsonSerializable
 {
     /**
      * @ORM\Id
@@ -38,9 +38,11 @@ class Game
     private $img;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\ManyToOne(targetEntity=Studio::class)
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $developer;
+    private $studio;
+
 
     public function getId(): ?int
     {
@@ -95,15 +97,30 @@ class Game
         return $this;
     }
 
-    public function getDeveloper(): ?string
+    public function getStudio(): ?Studio
     {
-        return $this->developer;
+        return $this->studio;
     }
 
-    public function setDeveloper(?string $developer): self
+    public function setStudio(?Studio $studio): self
     {
-        $this->developer = $developer;
+        $this->studio = $studio;
 
         return $this;
     }
+
+    public function jsonSerialize()
+    {
+        return[
+            'id' => $this->getId(),
+            'name' => $this->getName(),
+            'releasedAt' => $this->getReleasedAt(),
+            'img' => $this->getImg(),
+            'studio' => $this->getStudio(),
+            'description' => $this->getDescription()
+        ];
+    }
+
+
+
 }
