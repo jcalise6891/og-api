@@ -114,7 +114,7 @@ class Game implements \JsonSerializable
         return[
             'id' => $this->getId(),
             'name' => $this->getName(),
-            'releasedAt' => $this->getReleasedAt(),
+            'releasedAt' => $this->getReleasedAt()->format('d-m-y'),
             'img' => $this->getImg(),
             'studio' => $this->getStudio(),
             'description' => $this->getDescription()

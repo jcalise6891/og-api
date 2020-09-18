@@ -61,7 +61,7 @@ class Studio implements \JsonSerializable
         return[
             'id' => $this->getId(),
             'name' => $this->getName(),
-            'createdAt' => $this->getCreatedAt()
+            'createdAt' => $this->getCreatedAt()->format('d-m-Y')
         ];
     }
 }

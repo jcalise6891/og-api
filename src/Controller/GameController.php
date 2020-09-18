@@ -19,4 +19,14 @@ class GameController extends AbstractController
     {
         return $this->json($gameRepository->findAll());
     }
+
+    /**
+     * @Route("/game/{id}", name="singleGame")
+     * @param int $id
+     * @param GameRepository $gameRepository
+     * @return JsonResponse
+     */
+    public function retrieveSingleGame(int $id,GameRepository $gameRepository){
+        return $this->json($gameRepository->find($id));
+    }
 }
