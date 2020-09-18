@@ -10,13 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9fb8aab-7ecd-4758-b2ef-737275e22097" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-    </list>
+    <list default="true" id="f9fb8aab-7ecd-4758-b2ef-737275e22097" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,6 +109,7 @@
       <workItem from="1600330204326" duration="71000" />
       <workItem from="1600330291533" duration="92000" />
       <workItem from="1600330460225" duration="8485000" />
+      <workItem from="1600411651023" duration="910000" />
     </task>
     <servers />
   </component>
@@ -131,6 +126,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="248" key="NewPhpClassDialog" timestamp="1600330970550">
