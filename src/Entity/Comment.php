@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=CommentRepository::class)
  */
-class Comment
+class Comment implements \JsonSerializable
 {
     /**
      * @ORM\Id
@@ -55,5 +55,14 @@ class Comment
         $this->game = $game;
 
         return $this;
+    }
+
+    public function jsonSerialize()
+    {
+       return[
+           'id' => $this->getId(),
+           'content' => $this->getContent(),
+           'game' => $this->getGame()
+       ];
     }
 }

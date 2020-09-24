@@ -14,10 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9fb8aab-7ecd-4758-b2ef-737275e22097" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Game.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Game.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Studio.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Studio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Comment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +103,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OnlineGames" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="terminal" />
@@ -124,6 +125,9 @@
       <workItem from="1600414046950" duration="1957000" />
       <workItem from="1600416243983" duration="11541000" />
       <workItem from="1600438064786" duration="1247000" />
+      <workItem from="1600671080528" duration="3114000" />
+      <workItem from="1600756905616" duration="13795000" />
+      <workItem from="1600868736499" duration="4384000" />
     </task>
     <servers />
   </component>
@@ -143,26 +147,38 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2685" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1600421829321">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="765" y="207" key="#com.intellij.ide.util.MemberChooser" timestamp="1600780076657">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600415307334" />
+    <state x="765" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600780076657" />
     <state x="2685" y="207" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600421829321" />
-    <state x="2660" y="280" key="FileChooserDialogImpl" timestamp="1600438075800">
-      <screen x="1920" y="0" width="1920" height="1050" />
+    <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1600756919597">
+      <screen x="0" y="0" width="1920" height="1050" />
     </state>
+    <state x="740" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600756919597" />
     <state x="2660" y="280" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1600438075800" />
     <state x="769" y="248" key="NewPhpClassDialog" timestamp="1600330970550">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="769" y="248" key="NewPhpClassDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600330970550" />
-    <state x="461" y="170" key="SettingsEditor" timestamp="1600418655745">
+    <state x="461" y="170" key="SettingsEditor" timestamp="1600671065446">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600418655745" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1600417682460">
+    <state x="461" y="170" key="SettingsEditor/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600671065446" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1600784130372">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600417682460" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1600784130372" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Entity/Studio.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
