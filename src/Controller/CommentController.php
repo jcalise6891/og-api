@@ -26,9 +26,9 @@ class CommentController extends AbstractController
         CommentRepository $commentRepository,
         int $id)
     {
-      return $this->json($commentRepository->findBy([
-          'game' => $id
-      ]));
+        return $this->json($commentRepository->findBy([
+            'game' => $id
+        ]));
     }
 
     /**
@@ -51,7 +51,30 @@ class CommentController extends AbstractController
         $entityManager->persist($comment);
         $entityManager->flush();
 
-        return $this->json($request->request->all());
+        return $this->json($comment);
 
+    }
+
+    /**
+     * @Route ("game/{id}/comment", name="deleteComment", methods={"DELETE"})
+     * @param Request $request
+     * @param GameRepository $gameRepository
+     * @param CommentRepository $commentRepository
+     * @return JsonResponse
+     */
+    public function deleteComment(Request $request,
+                                  GameRepository $gameRepository,
+                                  CommentRepository $commentRepository
+    )
+    {
+        $idComment = $request->query->get('IDComment');
+
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $commentToDelete = $commentRepository->find($idComment);
+        $entityManager->remove($commentToDelete);
+        $entityManager->flush();
+
+      return $this->json($idComment);
     }
 }

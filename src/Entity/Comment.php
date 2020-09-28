@@ -23,10 +23,10 @@ class Comment implements \JsonSerializable
     private $content;
 
     /**
-     * @ORM\ManyToOne(targetEntity=game::class)
+     * @ORM\ManyToOne(targetEntity=Game::class)
      * @ORM\JoinColumn(nullable=false)
      */
-    private $game;
+    private $Game;
 
     public function getId(): ?int
     {
@@ -45,14 +45,14 @@ class Comment implements \JsonSerializable
         return $this;
     }
 
-    public function getGame(): ?game
+    public function getGame(): ?Game
     {
-        return $this->game;
+        return $this->Game;
     }
 
-    public function setGame(?game $game): self
+    public function setGame(?Game $Game): self
     {
-        $this->game = $game;
+        $this->Game = $Game;
 
         return $this;
     }
@@ -62,7 +62,7 @@ class Comment implements \JsonSerializable
        return[
            'id' => $this->getId(),
            'content' => $this->getContent(),
-           'game' => $this->getGame()
+           'Game' => $this->getGame()
        ];
     }
 }

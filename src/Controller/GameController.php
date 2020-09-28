@@ -4,20 +4,26 @@ namespace App\Controller;
 
 use App\Entity\Game;
 use App\Repository\GameRepository;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\SerializerInterface;
 
 class GameController extends AbstractController
 {
     /**
      * @Route("/game", name="game")
      * @param GameRepository $gameRepository
-     * @return JsonResponse
+     * @param SerializerInterface $serializer
+     * @return string
      */
-    public function retrieveGameList(GameRepository $gameRepository)
+    public function retrieveGameList(GameRepository $gameRepository, SerializerInterface $serializer)
     {
-        return $this->json($gameRepository->findAll());
+        $games = $gameRepository->findAll();
+        $serializedGame = $serializer->serialize($games,"json");
+
+        return new Response($serializedGame);
     }
 
     /**
